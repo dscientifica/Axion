@@ -1,0 +1,74 @@
+/* ================================
+   SIDEBAR COMPACTA
+   ================================ */
+
+.main-sidebar {
+    width: 90px !important;
+    background: #0f172a;
+    overflow: visible !important;
+}
+
+.sidebar {
+    margin: 10px;
+    border-radius: 14px;
+    background-color: #111827;
+    padding: 10px 6px;
+}
+
+.sidebar .nav-link {
+    justify-content: center;
+    padding: 12px 0;
+    margin-bottom: 6px;
+    border-radius: 10px;
+    color: #cbd5e1 !important;
+}
+
+.sidebar .nav-link p {
+    display: none;
+}
+
+/* Conteúdo */
+.content-wrapper {
+    margin-left: 110px !important;
+}
+
+/* ================================
+   FLYOUT (CAIXA FLUTUANTE)
+   ================================ */
+
+.sidebar-flyout {
+    position: fixed;
+    top: 80px;
+    left: 110px;
+    width: 320px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(0,0,0,.25);
+    padding: 18px;
+    z-index: 9999;
+    display: none;
+}
+
+.sidebar-flyout.active {
+    display: block;
+}
+
+.sidebar-flyout h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+
+.sidebar-flyout a {
+    display: block;
+    padding: 6px 0;
+    font-size: 13px;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.sidebar-flyout a:hover {
+    text-decoration: underline;
+}
+

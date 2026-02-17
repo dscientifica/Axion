@@ -1,0 +1,52 @@
+{% extends "admin/login.html" %}
+{% load static %}
+
+{% block extrastyle %}
+{{ block.super }}
+<style>
+/* Fundo para LOGIN e LOGOUT */
+body.login,
+body.logout {
+    background-image: url("{% static 'img/capa_ds.png' %}");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Centralização perfeita do conteúdo */
+.login #container,
+.logout #container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Caixa do login/logout */
+.login #content,
+.logout #content {
+    background: white;
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+    width: 360px;
+}
+
+/* Logo */
+.login h1 {
+    text-align: center;
+}
+
+.login h1 img {
+    max-width: 180px;
+    margin-bottom: 15px;
+}
+</style>
+{% endblock %}
+
+{% block branding %}
+<h1>
+    <img src="{% static 'img/logo_login.png' %}" alt="SIGMA">
+</h1>
+{% endblock %}
