@@ -17,7 +17,11 @@ SECRET_KEY = os.getenv(
 DEBUG = False
 
 
-ALLOWED_HOSTS = ["*"]  # ajustar em produção
+ALLOWED_HOSTS = [
+    "axion-el34.onrender.com",
+]
+
+
 
 # ========================
 # APPLICATIONS
@@ -177,7 +181,6 @@ JAZZMIN_SETTINGS = {
     },
 }
 
-
 # ========================
 # JAZZMIN UI TWEAKS
 # ========================
@@ -191,13 +194,25 @@ JAZZMIN_UI_TWEAKS = {
     "sidebar": "sidebar-dark-navy",
     "sidebar_fixed": True,
 
-    # 🔥 AQUI ESTÁ A CHAVE
-    "sidebar_mini": True,          # menu vira “caixa”
-    "sidebar_collapse": True,      # começa recolhido
+    "sidebar_mini": True,
+    "sidebar_collapse": True,
     "sidebar_nav_flat_style": True,
     "sidebar_nav_legacy_style": False,
 
     "theme": "default",
 }
 
+# ========================
+# CONFIGURAÇÕES IMPORTANTES PARA RENDER
+# ========================
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+SECURE_SSL_REDIRECT = True
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://axion-el34.onrender.com",
+]
 
